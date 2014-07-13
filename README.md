@@ -21,3 +21,25 @@ prerequisites
 - linux machine with BTLE-adapter
 - packages: libglib2.0-dev libdbus-1-dev libusb-dev libudev-dev libical-dev systemd libreadline-dev
 
+steps to read data
+------------------
+
+activate the BTLE interface
+```
+sudo hciconfig hci0 up
+```
+
+scan for BTLE devices
+```
+sudo hcitool lescan
+```
+after some seconds, the output should show the address of the device
+```
+LE Scan ...
+AA:BB:CC:DD:EE:FF (unknown)
+AA:BB:CC:DD:EE:FF NGE76
+AA:BB:CC:DD:EE:FF (unknown)
+AA:BB:CC:DD:EE:FF NGE76
+AA:BB:CC:DD:EE:FF (unknown)
+AA:BB:CC:DD:EE:FF NGE76
+```
