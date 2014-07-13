@@ -19,7 +19,9 @@ prerequisites
 -------------
 
 - linux machine with BTLE-adapter
-- packages: libglib2.0-dev libdbus-1-dev libusb-dev libudev-dev libical-dev systemd libreadline-dev
+- bluez with BTLE support
+(for a raspberry-pi with raspbian, see http://www.ioncannon.net/linux/1570/bluetooth-4-0-le-on-raspberry-pi-with-bluez-5-x/
+packages needed to compile bluez: libglib2.0-dev libdbus-1-dev libusb-dev libudev-dev libical-dev libreadline-dev systemd)
 
 steps to read data
 ------------------
