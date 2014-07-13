@@ -383,3 +383,17 @@ Notification handle = 0x0025 value: 00 01 01 3e 32
 - The 3rd byte corresponds to the channel selected with the sliding switch in the battery compartment (can be 1, 2 or 3)
 - The 4th byte corresponds to the temperature (I assume that subtracting 40 gets you to the correct value in celsius)
 - The 5th byte corresponds to the humidity (doesn't need to be converted)
+
+usage
+-----
+
+use shell script to create rrd files (set the variable 'name' inside the script to the BT device address)
+```
+./rrdcreate.sh
+```
+
+use perl script to read data from the BT device 
+```
+./lonometer-dump.pl -b AA:BB:CC:DD:EE:FF -r /tmp/
+```
+the script expects the rrd files in the given directory and puts a file 'update.sh' there which you can execute thereafter
